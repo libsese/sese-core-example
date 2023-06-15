@@ -11,3 +11,4 @@ find_package(sese-plugin CONFIG REQUIRED)
 
 add_subdirectory(record)
 add_subdirectory(thread)
+add_subdirectory(json)
