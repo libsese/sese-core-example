@@ -7,8 +7,8 @@ using namespace sese::json;
 int main() {
     auto object = std::make_shared<sese::json::ObjectData>();
 
-    SetString(object, "name", "example");
-    SetInteger(object, "id", 1919810);
+    SESE_JSON_SET_STRING(object, "name", "example");
+    SESE_JSON_SET_INTEGER(object, "id", 1919810);
 
     auto output = std::make_shared<sese::ConsoleOutputStream>();
     JsonUtil::serialize(object, output);

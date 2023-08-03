@@ -15,8 +15,8 @@ int main() {
     auto input = std::make_shared<sese::InputBufferWrapper>(content, sizeof(content));
     auto object = JsonUtil::deserialize(input, 3);
 
-    GetString(name, object, "name", "undef");
-    GetInteger(id, object, "id", 0);
+    SESE_JSON_GET_STRING(name, object, "name", "undef");
+    SESE_JSON_GET_INTEGER(id, object, "id", 0);
 
     sese::record::LogHelper::i(
             "name: %s, id %lld",

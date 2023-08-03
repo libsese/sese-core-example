@@ -3,7 +3,7 @@
 const char str[] = "Hello World";
 
 int main() {
-    sese::record::LogHelper logHelper("MyTag");
+    sese::record::LogHelper logHelper;
     logHelper.debug("Hello World");
     logHelper.info("STRING: %s", str);
     logHelper.warn("NUMBER: %d", 1024);
