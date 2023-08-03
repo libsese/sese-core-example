@@ -1,7 +1,7 @@
 #include "sese/config/json/JsonUtil.h"
+#include "sese/config/json/Marco.h"
 #include "sese/util/InputBufferWrapper.h"
 #include "sese/record/LogHelper.h"
-#include "sese/net/rpc/Marco.h"
 
 using namespace sese::json;
 

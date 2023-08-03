@@ -1,5 +1,5 @@
 #include "sese/config/json/JsonUtil.h"
-#include "sese/net/rpc/Marco.h"
+#include "sese/config/json/Marco.h"
 #include "sese/util/ConsoleOutputStream.h"
 
 using namespace sese::json;
