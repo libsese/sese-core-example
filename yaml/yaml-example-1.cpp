@@ -1,6 +1,6 @@
 #include <sese/config/yaml/YamlUtil.h>
 #include <sese/config/yaml/Marco.h>
-#include <sese/util/InputBufferWrapper.h>
+#include <sese/io/InputBufferWrapper.h>
 #include <sese/record/Marco.h>
 
 int main () {
@@ -8,7 +8,7 @@ int main () {
                       "  string: \"Hello\"\n"
                       "  int: 90\n"
                       "  bool: yes";
-    auto input = sese::InputBufferWrapper(str, strlen(str));
+    auto input = sese::io::InputBufferWrapper(str, strlen(str));
     auto object = std::dynamic_pointer_cast<sese::yaml::ObjectData>(sese::yaml::YamlUtil::deserialize(&input, 3));
     auto root = std::dynamic_pointer_cast<sese::yaml::ObjectData>(object->get("root"));
 

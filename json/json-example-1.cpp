@@ -1,6 +1,6 @@
 #include "sese/config/json/JsonUtil.h"
 #include "sese/config/json/Marco.h"
-#include "sese/util/InputBufferWrapper.h"
+#include "sese/io/InputBufferWrapper.h"
 #include "sese/record/LogHelper.h"
 
 using namespace sese::json;
@@ -12,7 +12,7 @@ int main() {
             "   \"id\": 114514"
             "}"
     };
-    auto input = std::make_shared<sese::InputBufferWrapper>(content, sizeof(content));
+    auto input = std::make_shared<sese::io::InputBufferWrapper>(content, sizeof(content));
     auto object = JsonUtil::deserialize(input, 3);
 
     SESE_JSON_GET_STRING(name, object, "name", "undef");

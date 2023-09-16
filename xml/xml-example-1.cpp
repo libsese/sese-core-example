@@ -1,6 +1,6 @@
 #include "sese/config/xml/XmlUtil.h"
 #include "sese/record/LogHelper.h"
-#include "sese/util/InputBufferWrapper.h"
+#include "sese/io/InputBufferWrapper.h"
 
 int main() {
     const char xml[]{
@@ -11,7 +11,7 @@ int main() {
             "    </person>\n"
             "</root>"
     };
-    auto input = std::make_shared<sese::InputBufferWrapper>(xml, sizeof(xml));
+    auto input = std::make_shared<sese::io::InputBufferWrapper>(xml, sizeof(xml));
 
     auto object = sese::xml::XmlUtil::deserialize(input, 3);
     auto person = object->getElements()[0];

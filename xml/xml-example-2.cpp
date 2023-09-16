@@ -1,5 +1,5 @@
 #include "sese/config/xml/XmlUtil.h"
-#include "sese/util/ConsoleOutputStream.h"
+#include "sese/io/ConsoleOutputStream.h"
 
 using namespace sese::xml;
 
@@ -18,8 +18,8 @@ int main() {
     port->setValue("443");
     profile->addElement(port);
 
-    auto output = std::make_shared<sese::ConsoleOutputStream>();
-    XmlUtil::serialize(object, output);
+    auto output = sese::io::ConsoleOutputStream();
+    XmlUtil::serialize(object, &output);
 
     return 0;
 }

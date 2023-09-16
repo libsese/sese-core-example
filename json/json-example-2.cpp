@@ -1,6 +1,6 @@
 #include "sese/config/json/JsonUtil.h"
 #include "sese/config/json/Marco.h"
-#include "sese/util/ConsoleOutputStream.h"
+#include "sese/io/ConsoleOutputStream.h"
 
 using namespace sese::json;
 
@@ -10,8 +10,8 @@ int main() {
     SESE_JSON_SET_STRING(object, "name", "example");
     SESE_JSON_SET_INTEGER(object, "id", 1919810);
 
-    auto output = std::make_shared<sese::ConsoleOutputStream>();
-    JsonUtil::serialize(object, output);
+    auto output = sese::io::ConsoleOutputStream();
+    JsonUtil::serialize(object.get(), &output);
 
     return 0;
 }

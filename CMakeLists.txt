@@ -3,6 +3,8 @@ project(sese-core-example)
 
 set(CMAKE_CXX_STANDARD 20)
 
+find_package(ZLIB REQUIRED)
+find_package(OpenSSL REQUIRED)
 find_package(SString CONFIG REQUIRED)
 find_package(SimpleUuid CONFIG REQUIRED)
 find_package(Sese CONFIG REQUIRED)
