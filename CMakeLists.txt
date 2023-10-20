@@ -1,3 +1,5 @@
+set(VCPKG_OVERLAY_PORTS ${CMAKE_CURRENT_LIST_DIR}/ports)
+
 cmake_minimum_required(VERSION 3.10)
 project(sese-core-example)
 
@@ -5,11 +7,11 @@ set(CMAKE_CXX_STANDARD 20)
 
 find_package(ZLIB REQUIRED)
 find_package(OpenSSL REQUIRED)
-find_package(SString CONFIG REQUIRED)
-find_package(SimpleUuid CONFIG REQUIRED)
 find_package(Sese CONFIG REQUIRED)
-find_package(sese-event CONFIG REQUIRED)
-find_package(sese-plugin CONFIG REQUIRED)
+
+if (${MSVC})
+    add_compile_options(/utf-8)
+endif ()
 
 add_subdirectory(record)
 add_subdirectory(thread)
