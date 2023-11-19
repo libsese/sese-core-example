@@ -1,8 +1,10 @@
 {
-    "name": "sese-event-example",
+    "name": "sese-core-example",
     "version-string": "0.1.0",
     "supports": "x64",
     "dependencies": [
-        "sese"
+        {
+            "name": "sese-core"
+        }
     ]
 }

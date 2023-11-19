@@ -5,9 +5,7 @@ project(sese-core-example)
 
 set(CMAKE_CXX_STANDARD 20)
 
-find_package(ZLIB REQUIRED)
-find_package(OpenSSL REQUIRED)
-find_package(Sese CONFIG REQUIRED)
+find_package(sese CONFIG REQUIRED)
 
 if (${MSVC})
     add_compile_options(/utf-8)

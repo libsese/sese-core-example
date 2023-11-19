@@ -1,6 +1,6 @@
 #include "sese/record/LogHelper.h"
 
-const char str[] = "Hello World";
+constexpr char str[] = "Hello World";
 
 int main() {
     sese::record::LogHelper::d("Hello World");
