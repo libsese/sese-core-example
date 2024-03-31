@@ -1,8 +1,10 @@
 #include <sese/convert/PercentConverter.h>
 #include <sese/io/FixedBuilder.h>
 #include <sese/record/Marco.h>
+#include "sese/util/Initializer.h"
 
-int main () {
+int main(int argc, char **argv) {
+    sese::initCore(argc, argv);
     const char *string = "你好，2023";
     auto buffer1 = std::make_shared<sese::io::FixedBuilder>(128);
     sese::PercentConverter::encode(string, buffer1);

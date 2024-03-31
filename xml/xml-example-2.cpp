@@ -1,9 +1,11 @@
 #include "sese/config/xml/XmlUtil.h"
 #include "sese/io/ConsoleOutputStream.h"
+#include "sese/util/Initializer.h"
 
 using namespace sese::xml;
 
-int main() {
+int main(int argc, char **argv) {
+    sese::initCore(argc, argv);
     auto object = std::make_shared<Element>("config");
 
     auto profile = std::make_shared<Element>("profile");

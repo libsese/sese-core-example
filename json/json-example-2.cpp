@@ -1,10 +1,13 @@
 #include "sese/config/json/JsonUtil.h"
 #include "sese/config/json/Marco.h"
 #include "sese/io/ConsoleOutputStream.h"
+#include "sese/util/Initializer.h"
 
 using namespace sese::json;
 
-int main() {
+
+int main(int argc, char **argv) {
+    sese::initCore(argc, argv);
     auto object = std::make_shared<sese::json::ObjectData>();
 
     SESE_JSON_SET_STRING(object, "name", "example");

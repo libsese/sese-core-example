@@ -1,8 +1,10 @@
 #include "sese/config/xml/XmlUtil.h"
 #include "sese/record/LogHelper.h"
 #include "sese/io/InputBufferWrapper.h"
+#include "sese/util/Initializer.h"
 
-int main() {
+int main(int argc, char **argv) {
+    sese::initCore(argc, argv);
     const char xml[]{
             "<root>\n"
             "    <person>\n"

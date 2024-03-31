@@ -2,8 +2,10 @@
 #include <sese/config/yaml/Marco.h>
 #include <sese/io/InputBufferWrapper.h>
 #include <sese/record/Marco.h>
+#include "sese/util/Initializer.h"
 
-int main () {
+int main(int argc, char **argv) {
+    sese::initCore(argc, argv);
     const char *str = "root:\n"
                       "  string: \"Hello\"\n"
                       "  int: 90\n"

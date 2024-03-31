@@ -2,10 +2,12 @@
 #include "sese/config/json/Marco.h"
 #include "sese/io/InputBufferWrapper.h"
 #include "sese/record/LogHelper.h"
+#include "sese/util/Initializer.h"
 
 using namespace sese::json;
 
-int main() {
+int main(int argc, char **argv) {
+    sese::initCore(argc, argv);
     const char content[]{
             "{"
             "   \"name\": \"example\","

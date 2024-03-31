@@ -1,8 +1,10 @@
 #include "sese/record/LogHelper.h"
+#include "sese/util/Initializer.h"
 
 const char str[] = "Hello World";
 
-int main() {
+int main(int argc, char **argv) {
+    sese::initCore(argc, argv);
     sese::record::LogHelper logHelper;
     logHelper.debug("Hello World");
     logHelper.info("STRING: %s", str);
