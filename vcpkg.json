@@ -4,7 +4,10 @@
     "supports": "x64",
     "dependencies": [
         {
-            "name": "sese-core"
+            "name": "sese-core",
+            "features": [
+                "archive"
+            ]
         }
     ]
 }
